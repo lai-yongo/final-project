@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wi, initial-scale=1.0">
+    <title>烘焙計算</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">烘焙計算</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">基本 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index2.html">兩種麵糊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index3.html">含餡料</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="mydiv">
+            <div>
+                <label class=" col-form-label">名稱：</label>
+                <label class=" col-form-label">五峰白吐司</label>
+            </div>
+            <div>
+                <label class=" col-form-label">數量： </label>
+                <input type="number" id="inputNumber" placeholder="請輸入數量" value="3">
+                <label class="col-form-label">條</label>
+            </div>
+            <div>
+                <label class=" col-form-label">規格： </label>
+                <input type="number" id="inputSpec" placeholder="單位數量有幾公克?" value="900">
+                <label class=" col-form-label">公克/每條</label>
+            </div>
+            <div>
+                <label class=" col-form-label">預估損耗：</label>
+                <input type="number" id="inputLoss" placeholder="請輸入預估損耗" value="5">
+                <label class="col-form-label">%</label>
+            </div>
+        </div>
+        <div class="mydiv img" id="img1"></div>
+        <div class="mydiv img" id="img2"></div>
+        <div class="mydiv img" id="img1"></div>
+        <div class="mydiv img" id="img2"></div>
+
+
+        <div>
+            <button id="calculate_btn" type="button" class="btn btn-outline-primary">計算</button>
+        </div>
+
+        <table class="table table-striped" id="mytable">
+            <thead>
+                <tr>
+
+                    <th scope="col">原料名稱</th>
+                    <th scope="col">百分比</th>
+                    <th scope="col">重量(公克)</th>
+                    <th scope="row">修改/刪除</th>
+                </tr>
+            </thead>
+            <tbody id='tbody'>
+                <tr>
+
+                    <th scope="row" id="name">高筋粉</th>
+                    <td>
+
+                        <input type="number" id="inputPercentage" placeholder="請輸入烘焙百分比" value="100">
+
+                    </td>
+                    <td>
+                        <input type="number" readonly class="form-control-plaintext" id="outputWeight">
+
+                    </td>
+                    <th scope="row">
+
+
+                        <button type="button" class="btn btn-outline-danger">刪除</button>
+                    </th>
+
+                </tr>
+                <tr>
+
+                    <th scope="row">水</th>
+                    <td>
+
+                        <input type="number" id="inputPercentage" placeholder="請輸入烘焙百分比" value="62">
+
+                    </td>
+                    <td>
+                        <input type="number" readonly class="form-control-plaintext" id="outputWeight">
+                    </td>
+
+                    <th scope="row">
+
+                        <button type="button" class="btn btn-outline-danger">刪除</button>
+                    </th>
+                </tr>
+                <tr>
+
+                    <th scope="row">酵母</th>
+                    <td>
+
+                        <input type="number" id="inputPercentage" placeholder="請輸入烘焙百分比" value="1.5">
+
+                    </td>
+                    <td>
+                        <input type="number" readonly class="form-control-plaintext" id="outputWeight">
+                    </td>
+
+                    <th scope="row">
+                        <button type="button" class="btn btn-outline-danger">刪除</button>
+                    </th>
+                </tr>
+                <tr>
+
+                    <th scope="row">鹽</th>
+                    <td>
+
+                        <input type="number" id="inputPercentage" placeholder="請輸入烘焙百分比" value="2">
+
+                    </td>
+                    <td>
+                        <input type="number" readonly class="form-control-plaintext" id="outputWeight">
+                    </td>
+
+                    <th scope="row">
+                        <button type="button" class="btn btn-outline-danger">刪除</button>
+                    </th>
+                </tr>
+                <tr>
+
+                    <th scope="row">糖</th>
+                    <td>
+
+                        <input type="number" id="inputPercentage" placeholder="請輸入烘焙百分比" value="8">
+
+                    </td>
+                    <td>
+                        <input type="number" readonly class="form-control-plaintext" id="outputWeight">
+                    </td>
+
+                    <th scope="row">
+                        <button type="button" class="btn btn-outline-danger">刪除</button>
+                    </th>
+                </tr>
+                <tr>
+
+                    <th scope="row">酥油</th>
+                    <td>
+
+                        <input type="number" id="inputPercentage" placeholder="請輸入烘焙百分比" value="8">
+
+                    </td>
+                    <td>
+                        <input type="number" readonly class="form-control-plaintext" id="outputWeight">
+                    </td>
+
+                    <th scope="row">
+                        <button type="button" class="btn btn-outline-danger">刪除</button>
+                    </th>
+                </tr>
+                <tr>
+
+                    <th scope="row">奶油</th>
+                    <td>
+
+                        <input type="number" id="inputPercentage" placeholder="請輸入烘焙百分比" value="4">
+
+                    </td>
+                    <td>
+                        <input type="number" readonly class="form-control-plaintext" id="outputWeight">
+                    </td>
+
+                    <th scope="row">
+                        <button type="button" class="btn btn-outline-danger">刪除</button>
+                    </th>
+                </tr>
+                <tr>
+
+                    <th scope="row">改良劑</th>
+                    <td>
+
+                        <input type="number" id="inputPercentage" placeholder="請輸入烘焙百分比" value="0.5">
+
+                    </td>
+                    <td>
+                        <input type="number" readonly class="form-control-plaintext" id="outputWeight">
+                    </td>
+
+                    <th scope="row">
+                        <button type="button" class="btn btn-outline-danger">刪除</button>
+                    </th>
+                </tr>
+
+                <tr id="Total">
+
+                    <th scope="row">Total</th>
+                    <td>
+
+                        <input type="number" readonly id="TotalPercentage" placeholder="">
+
+                    </td>
+                    <td>
+                        <input type="number" readonly class="form-control-plaintext" id="TotalWeight">
+                    </td>
+
+                    <th scope="row">
+
+                    </th>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+
+        <form>
+            <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1">
+
+                    <input type="text" class="form-control" id="NewName" placeholder="請輸入原料名稱">
+                </div>
+                <div class="col-sm-3 my-1">
+
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="NewInputPercentage" placeholder="請輸入烘焙百分比">
+                    </div>
+                </div>
+
+                <div class="col-auto my-1">
+                    <button id="new" type="button" class="btn btn-primary">新增</button>
+                </div>
+            </div>
+        </form>
+
+        <button type="button" id="show" class="btn btn-secondary">顯示計算方法</button>
+        <button type="button" id="hide" class="btn btn-success">隱藏計算方法</button>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+
+                <h3>計算方法</h3>
+                <p class="lead">(1)先算出需要的麵團總重，即單位麵團公克數乘上所需數量，再去除以(1-預估損耗)
+                </p>
+                <p class="lead" id="result1">
+                </p>
+                <p class="lead"> 由於烘焙百分比是把麵粉當為基準，使用的麵粉重量為1(換成百分比為100%)，其他材料所使用重量如為麵粉重量的0.05倍，則換算成百分比記為5%
+                </p>
+                <p class="lead"> (2)把烘焙百分比的項全部加起來，加起來的值為Total
+                </p>
+                <p class="lead" id="result2">
+                </p>
+                <p class="lead">(3)麵團總重除以Total，得到倍數。
+                </p>
+                <p class="lead" id="result3">
+                </p>
+                <p class="lead">(4)個別的百分比在去乘上倍數，得到該材料所需重量。
+                </p>
+                <p class="lead" id="result4">
+                </p>
+            </div>
+        </div>
+
+        <!-- 900 &times; 3 &divide; ( 1 - 5%) = 2842 (g) -->
+
+        <footer>
+            前端程式設計(2020 spring)
+            b05603048 賴勇辰 final project
+        </footer>
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/button.js"></script>
+
+    <script src="./js/add.js"></script>
+    <script src="./js/delete.js"></script>
+    <script src="./js/arrange.js"></script>
+    <script src="./js/show_hide.js"></script>
+</body>
+
+</html>

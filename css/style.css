@@ -1,0 +1,52 @@
+footer {
+    text-align: center;
+    color: #666;
+    border-top: 1px solid;
+    padding: 30px;
+}
+
+.col-sm-2 {
+
+    max-width: 10%;
+}
+
+/* .btn-outline-primary {
+    margin-bottom: 10px;
+} */
+
+.jumbotron {
+    padding: 20px;
+    margin-top: 2rems;
+}
+
+.form-row {
+    background-color: #fac797;
+    margin: 5px;
+}
+
+.mydiv {
+    display: inline-block;
+}
+
+.img {
+    background-image: url(bread.JPG);
+    height: 140px;
+    width: 140px;
+    margin-top: 15px;
+    background-size: cover;
+    border-radius: 15px;
+
+}
+
+#img1 {
+    background-image: url(../img/bread.JPG);
+}
+
+#img2 {
+    background-image: url(../img/bread2.JPG);
+    background-position-x: -90px;
+}
+
+.frac {
+    width: 60px
+}
