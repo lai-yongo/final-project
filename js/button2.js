@@ -8,10 +8,11 @@ $('#calculate_btn').on('click', () => {
     Result = Math.round(Spec * Num / ((100 - Loss) / 100))
 
     var df = $('#dFirst').val()
-    var nf = $('#nFirst').val()
+    
 
     var ds = $('#dSecond').val()
-    var ns = $('#nSecond').val()
+    var nf = parseInt(df) + parseInt(ds)
+    var ns = parseInt(df) + parseInt(ds)
 
     var ResultS = Math.round(Result * ds / ns)
     var ResultF = Math.round(Result * df / nf)
